@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "My Web Extension",
+    "version": "0.0.1",
+    "description": "A Web Extension created with Vite",
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": true
+    },
+    "action": {
+        "default_title": "View all available tests",
+        "default_popup": "popup.html"
+    }
+}
