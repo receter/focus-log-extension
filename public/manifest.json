@@ -1,14 +1,14 @@
 {
     "manifest_version": 3,
-    "name": "My Web Extension",
+    "name": "Focus Log",
     "version": "0.0.1",
-    "description": "A Web Extension created with Vite",
+    "description": "A very simple web extension that helps you keep track of what you did.",
     "options_ui": {
         "page": "options.html",
         "open_in_tab": true
     },
     "action": {
-        "default_title": "View all available tests",
+        "default_title": "What are you working on?",
         "default_popup": "popup.html"
     }
 }
