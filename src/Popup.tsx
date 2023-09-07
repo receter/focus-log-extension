@@ -1,13 +1,14 @@
-import { useState } from 'react';
+import { useRef } from 'react';
 import { usePersistentState } from './hooks/usePersistentState';
 
 import styles from './popup.module.css';
 
 function Popup() {
+  const refInput = useRef<HTMLInputElement>(null);
   const [currentFocus, setCurrentFocus] = usePersistentState<string>('currentFocus', '');
-  const [focusInputValue, setFocusInputValue] = useState<string>(currentFocus);
-  const [editingFocus, setEditingFocus] = useState<boolean>(!currentFocus);
+  const [focusInputValue, setFocusInputValue] = usePersistentState<string>('focusInputValue', '');
   const [focusLog, setFocusLog] = usePersistentState<string[]>('focusLog', []);
+  const [nextUp, setNextUp] = usePersistentState<string[]>('nextUp', []);
 
   const handleClickLogAndNew = () => {
     if (!currentFocus) return;
@@ -16,51 +17,92 @@ function Popup() {
     setFocusInputValue('');
   }
 
-  const handleClickEditFocus = () => {
-    if (!currentFocus) return;
-    setFocusInputValue(currentFocus);
-    setEditingFocus(true);
-  }
-
   const handleClickSetFocus = () => {
     if (!focusInputValue) return;
     setCurrentFocus(focusInputValue);
-    setEditingFocus(false);
+  }
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    handleClickSetFocus();
+  }
+
+  const deleteNextUpItem = (i: number) => {
+    const newNextUp = [...nextUp];
+    newNextUp.splice(i, 1);
+    setNextUp(newNextUp);
+    refInput.current?.focus();
+  }
+
+  const handleClickNextUpItem = (i: number) => {
+    setFocusInputValue(nextUp[i]);
+    deleteNextUpItem(i);
+  }
+
+  const handleClickAddNextUp = () => {
+    if (!focusInputValue) return;
+    setNextUp([...nextUp, focusInputValue]);
+    setFocusInputValue('');
+    refInput.current?.focus();
   }
 
   return <div className={styles.popup}>
-    {(!editingFocus && currentFocus) && <>
+    {currentFocus && <>
       <div
         className={styles.focus}
-        onClick={handleClickEditFocus}
       >{currentFocus}</div>
       <button
         disabled={!currentFocus}
         onClick={handleClickLogAndNew}
-      >Log this and set new focus</button>
+      >Log and clear</button>
     </>}
-    {(editingFocus || !currentFocus) && <>
+    {!currentFocus && <form className={styles.form} onSubmit={handleFormSubmit}>
       <input
+        ref={refInput}
         className={styles.input}
         autoFocus
-        placeholder='What are you working on?'
+        placeholder='Hmm… what should I focus on?'
         type="text"
         onChange={(e) => setFocusInputValue(e.target.value)}
         value={focusInputValue}
       />
-      <button
-        className={styles.button_primary}
-        disabled={!focusInputValue}
-        onClick={handleClickSetFocus}
-      >Set Focus</button>
+      <div className={styles.buttons}>
+        <button
+          className={styles.button_primary}
+          disabled={!focusInputValue}
+          type='submit'
+        >Set Focus</button>
+        <button
+          disabled={!focusInputValue}
+          type='button'
+          onClick={handleClickAddNextUp}
+        >Add for later</button>
+      </div>
+
+    </form>}
+
+    {(nextUp.length > 0 && !currentFocus) && <>
+      <h2>Next up</h2>
+      {nextUp.map((focus, i) => <div
+        key={i}
+        className={styles.nextUpItem}
+        onClick={() => handleClickNextUpItem(i)}
+      >
+        {focus}
+        {/* <button className={styles.deleteButton} onClick={() => handleClickDeleteNextUp(i)} >Delete</button> */}
+      </div>)}
     </>}
-    <h2>Focus log</h2>
-    <ul>
-      {focusLog.map((focus, i) => <li key={i}>{focus}</li>)}
-    </ul>
-    <button
-      onClick={() => setFocusLog([])}
-    >Clear Log </button>
+
+    {(focusLog.length > 0 && !currentFocus) && <>
+      <h2>Focus log</h2>
+      <ul>
+        {focusLog.map((focus, i) => <li key={i}>{focus}</li>)}
+      </ul>
+      <button
+        onClick={() => setFocusLog([])}
+      >Clear Log </button>
+    </>}
+
   </div>
 }
 

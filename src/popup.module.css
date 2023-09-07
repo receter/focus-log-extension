@@ -1,6 +1,21 @@
 .input {
+    display: block;
+    width: 100%;
     font-size: 1.25rem;
+    box-sizing: border-box;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form button {
+    display: block;
+    width: 100%;
+}
+
 
 .popup {
     min-width: 30rem;
@@ -15,7 +30,6 @@
     padding: 1rem;
     background-color: aliceblue;
     border-radius: .5rem;
-    cursor: pointer;
     background: black;
     color: white;
 }
@@ -25,7 +39,23 @@
     margin-right: .5rem;
 }
 
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
 .button_primary {
     background: #747bff;
     color: white;
+}
+
+.nextUpItem {
+    background: #efefef;
+    padding: .33rem .75rem;
+    cursor: pointer;
+    border-radius: 1em;
+}
+
+.deleteButton {
+
 }
