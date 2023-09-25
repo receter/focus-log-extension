@@ -1,7 +1,8 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { usePersistentState } from './hooks/usePersistentState';
-
 import styles from './popup.module.css';
+import Browser from 'webextension-polyfill';
+import { actionIconActive, actionIconDefault } from './helpers';
 
 function Popup() {
   const refInput = useRef<HTMLInputElement>(null);
@@ -9,6 +10,15 @@ function Popup() {
   const [focusInputValue, setFocusInputValue] = usePersistentState<string>('focusInputValue', '');
   const [focusLog, setFocusLog] = usePersistentState<string[]>('focusLog', []);
   const [nextUp, setNextUp] = usePersistentState<string[]>('nextUp', []);
+
+  useEffect(() => {
+    // Sets Web Extension popup icon /images/icon-16.png
+    if (currentFocus) {
+      Browser.action.setIcon(actionIconActive);
+    } else {
+      Browser.action.setIcon(actionIconDefault);
+    }
+  }, [currentFocus]);
 
   const handleClickLogAndNew = () => {
     if (!currentFocus) return;
