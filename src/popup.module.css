@@ -44,11 +44,6 @@
     gap: 1rem;
 }
 
-.button_primary {
-    background: #747bff;
-    color: white;
-}
-
 .nextUpItem {
     background: #efefef;
     padding: .33rem .75rem;
@@ -56,6 +51,4 @@
     border-radius: 1em;
 }
 
-.deleteButton {
-
-}
+.deleteButton {}

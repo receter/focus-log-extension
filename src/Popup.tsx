@@ -1,3 +1,4 @@
+import { Button } from '@sys42/components';
 import { useEffect, useRef } from 'react';
 import { usePersistentState } from './hooks/usePersistentState';
 import styles from './popup.module.css';
@@ -61,10 +62,10 @@ function Popup() {
       <div
         className={styles.focus}
       >{currentFocus}</div>
-      <button
-        disabled={!currentFocus}
-        onClick={handleClickLogAndNew}
-      >Log and clear</button>
+      <Button
+        isDisabled={!currentFocus}
+        onPress={handleClickLogAndNew}
+      >Log and clear</Button>
     </>}
     {!currentFocus && <form className={styles.form} onSubmit={handleFormSubmit}>
       <input
@@ -77,16 +78,15 @@ function Popup() {
         value={focusInputValue}
       />
       <div className={styles.buttons}>
-        <button
-          className={styles.button_primary}
-          disabled={!focusInputValue}
+        <Button
+          variant='primary'
+          isDisabled={!focusInputValue}
           type='submit'
-        >Set Focus</button>
-        <button
-          disabled={!focusInputValue}
-          type='button'
-          onClick={handleClickAddNextUp}
-        >Add for later</button>
+        >Set Focus</Button>
+        <Button
+          isDisabled={!focusInputValue}
+          onPress={handleClickAddNextUp}
+        >Add for later</Button>
       </div>
 
     </form>}
@@ -108,9 +108,9 @@ function Popup() {
       <ul>
         {focusLog.map((focus, i) => <li key={i}>{focus}</li>)}
       </ul>
-      <button
-        onClick={() => setFocusLog([])}
-      >Clear Log </button>
+      <Button
+        onPress={() => setFocusLog([])}
+      >Clear Log </Button>
     </>}
 
   </div>
