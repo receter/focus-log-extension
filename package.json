@@ -10,8 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@sys42/components": "^0.0.5",
+    "@sys42/utils": "^1.0.0",
     "@types/node": "^18.15.11",
+    "@userbrain/ui": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

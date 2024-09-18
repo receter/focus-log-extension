@@ -1,5 +1,4 @@
-import "@sys42/components/base.css"
-import "@sys42/components/default-custom-properties.css"
+import "@userbrain/ui/base.css"
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Popup from './Popup'

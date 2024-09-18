@@ -1,4 +1,4 @@
-import { Button } from '@sys42/components';
+import { Button } from '@userbrain/ui';
 import { useEffect, useRef } from 'react';
 import { usePersistentState } from './hooks/usePersistentState';
 import styles from './popup.module.css';
