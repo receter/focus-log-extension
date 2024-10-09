@@ -9,3 +9,9 @@
         "wdth" 100,
         "YTLC" 500;
 }
+
+body {
+    /* For Google Chrome */
+    /* https: //stackoverflow.com/questions/69923665/chrome-extension-shows-incorrect-font-size-compared-to-the-local-dev-testing */
+    font-size: 100%;
+}
