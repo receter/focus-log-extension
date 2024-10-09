@@ -1,0 +1,11 @@
+@import url('@userbrain/ui/base.css');
+
+:root {
+    font-family: "Nunito Sans", "Helvetica", Arial, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+}

@@ -1,4 +1,4 @@
-import "@userbrain/ui/base.css"
+import "./base.css"
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Popup from './Popup'
