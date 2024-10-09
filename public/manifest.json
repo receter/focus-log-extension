@@ -1,28 +1,32 @@
 {
-    "manifest_version": 3,
-    "name": "Focus Log",
-    "version": "0.0.2",
-    "description": "A very simple web extension that helps you keep track of what you did.",
-    "options_ui": {
-        "page": "options.html",
-        "open_in_tab": true
-    },
-    "permissions": [
-        "storage"
-    ],
-    "icons": {
-        "16": "images/icon-16.png",
-        "32": "images/icon-32.png",
-        "48": "images/icon-48.png",
-        "128": "images/icon-128.png"
-    },
-    "action": {
-        "default_title": "What are you working on?",
-        "default_popup": "popup.html",
-        "default_icon": {
-            "16": "images/icon-inactive-16.png",
-            "24": "images/icon-inactive-24.png",
-            "32": "images/icon-inactive-32.png"
-        }
+  "manifest_version": 3,
+  "name": "Focus Log",
+  "version": "1.0.0",
+  "description": "A simple web extension that helps you keep track of what you did.",
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "permissions": ["storage"],
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "action": {
+    "default_title": "What are you working on?",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon-inactive-16.png",
+      "24": "images/icon-inactive-24.png",
+      "32": "images/icon-inactive-32.png"
     }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "focus-log@userbrain.com",
+      "strict_min_version": "109.0"
+    }
+  }
 }

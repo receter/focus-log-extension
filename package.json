@@ -1,13 +1,14 @@
 {
-  "name": "userbrain-web-extension",
+  "name": "focus-log-web-extension",
   "private": true,
-  "version": "0.0.2",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "watch": "tsc && vite build --watch",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "zip": "rimraf dist.zip && cd dist && zip -r -FS ../dist.zip * --exclude '*.git*'"
   },
   "dependencies": {
     "@sys42/utils": "^1.0.1",
@@ -23,6 +24,7 @@
     "@vitejs/plugin-react": "^3.1.0",
     "eslint": "^8.38.0",
     "eslint-config-react-app": "^7.0.1",
+    "rimraf": "^6.0.1",
     "typescript": "^5.5.3",
     "vite": "^4.2.0",
     "webextension-polyfill": "^0.10.0"
