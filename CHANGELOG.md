@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/receter/focus-log-extension/compare/focus-log-web-extension-v1.1.3...focus-log-web-extension-v1.1.4) (2024-10-17)
+
+
+### Bug Fixes
+
+* token as input ([770e70b](https://github.com/receter/focus-log-extension/commit/770e70b6ecbe93150339c527d3de1bc56f1878ff))
+
 ## [1.1.3](https://github.com/receter/focus-log-extension/compare/focus-log-web-extension-v1.1.2...focus-log-web-extension-v1.1.3) (2024-10-17)
 
 
