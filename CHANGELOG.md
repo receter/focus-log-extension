@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/receter/focus-log-extension/compare/focus-log-web-extension-v1.1.2...focus-log-web-extension-v1.1.3) (2024-10-17)
+
+
+### Bug Fixes
+
+* add contents read to workflow ([da713c5](https://github.com/receter/focus-log-extension/commit/da713c5297f1b51e47392b5585b2d3146ee35f5c))
+
 ## [1.1.2](https://github.com/receter/focus-log-extension/compare/focus-log-web-extension-v1.1.1...focus-log-web-extension-v1.1.2) (2024-10-17)
 
 
