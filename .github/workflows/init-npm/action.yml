@@ -15,7 +15,7 @@ runs:
         registry-url: https://registry.npmjs.org
 
     - name: Authenticate with GitHub Package Registry
-      run: echo "//npm.pkg.github.com/:_authToken=${{ inputs.node_auth_token_github }}" >> ~/.npmrc
+      run: npm set "//npm.pkg.github.com/:_authToken=${{ inputs.node_auth_token_github }}"
       shell: bash
 
     - name: Install dependencies
