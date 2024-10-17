@@ -1,7 +1,9 @@
 name: Init npm
 
-permissions:
-  contents: read
+inputs:
+  node_auth_token_github:
+    description: "The token that is needed to authenticate with GitHub Package Registry"
+    required: true
 
 runs:
   using: "composite"
@@ -13,7 +15,7 @@ runs:
         registry-url: https://registry.npmjs.org
 
     - name: Authenticate with GitHub Package Registry
-      run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.NODE_AUTH_TOKEN_GITHUB }}" >> ~/.npmrc
+      run: echo "//npm.pkg.github.com/:_authToken=${{ inputs.node_auth_token_github }}" >> ~/.npmrc
       shell: bash
 
     - name: Install dependencies
