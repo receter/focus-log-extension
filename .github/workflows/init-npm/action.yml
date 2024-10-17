@@ -1,5 +1,8 @@
 name: Init npm
 
+permissions:
+  contents: read
+
 runs:
   using: "composite"
   steps:
@@ -10,9 +13,7 @@ runs:
         registry-url: https://registry.npmjs.org
 
     - name: Authenticate with GitHub Package Registry
-      env:
-        NODE_AUTH_TOKEN_GITHUB: ${{ secrets.NODE_AUTH_TOKEN_GITHUB }}
-      run: echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN_GITHUB}" >> ~/.npmrc
+      run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.NODE_AUTH_TOKEN_GITHUB }}" >> ~/.npmrc
       shell: bash
 
     - name: Install dependencies
