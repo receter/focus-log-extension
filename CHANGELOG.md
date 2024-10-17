@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/receter/focus-log-extension/compare/focus-log-web-extension-v1.1.0...focus-log-web-extension-v1.1.1) (2024-10-17)
+
+
+### Bug Fixes
+
+* update @userbrain/ui and remove relative import ([47f49cb](https://github.com/receter/focus-log-extension/commit/47f49cba742c7f96e8141da596f2226606ec5953))
+
 ## [1.1.0](https://github.com/receter/focus-log-extension/compare/focus-log-web-extension-v1.0.0...focus-log-web-extension-v1.1.0) (2024-10-17)
 
 
