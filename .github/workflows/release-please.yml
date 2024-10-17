@@ -39,5 +39,5 @@ jobs:
         shell: bash
         run: |
           npm run build && npm run zip
-          mv ./dist.zip ./dist-${{ needs.release-please.outputs.tag_name }}.zip
-          gh release upload ${{ needs.release-please.outputs.tag_name }} ./dist-${{ needs.release-please.outputs.tag_name }}.zip
+          mv ./dist.zip ./${{ needs.release-please.outputs.tag_name }}.zip
+          gh release upload ${{ needs.release-please.outputs.tag_name }} ./${{ needs.release-please.outputs.tag_name }}.zip
