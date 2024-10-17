@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/receter/focus-log-extension/compare/focus-log-web-extension-v1.1.1...focus-log-web-extension-v1.1.2) (2024-10-17)
+
+
+### Bug Fixes
+
+* trigger release please ([b3652f3](https://github.com/receter/focus-log-extension/commit/b3652f3e814f1b48d1da2f3ef06c7f11707532d9))
+
 ## [1.1.1](https://github.com/receter/focus-log-extension/compare/focus-log-web-extension-v1.1.0...focus-log-web-extension-v1.1.1) (2024-10-17)
 
 
