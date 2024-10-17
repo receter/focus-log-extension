@@ -4,7 +4,7 @@ import { usePersistentState } from './hooks/usePersistentState';
 import styles from './popup.module.css';
 import Browser from 'webextension-polyfill';
 import { actionIconActive, actionIconDefault } from './helpers';
-import { TextLinkButton } from '../../sys42/packages/ui/dist/TextLink';
+import { TextLinkButton } from '@userbrain/ui';
 import { accessibleOnClick, concatClassNames as cn } from '@sys42/utils';
 
 function Popup() {
