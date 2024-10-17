@@ -6,6 +6,14 @@
 ### Bug Fixes
 
 * token as input ([770e70b](https://github.com/receter/focus-log-extension/commit/770e70b6ecbe93150339c527d3de1bc56f1878ff))
+* use npm set to auth in ci ([5dd9bb4](https://github.com/receter/focus-log-extension/commit/5dd9bb4f0cfe62d1e7dbb898b758450b7960a151))
+
+## [1.1.4](https://github.com/receter/focus-log-extension/compare/focus-log-web-extension-v1.1.3...focus-log-web-extension-v1.1.4) (2024-10-17)
+
+
+### Bug Fixes
+
+* token as input ([770e70b](https://github.com/receter/focus-log-extension/commit/770e70b6ecbe93150339c527d3de1bc56f1878ff))
 
 ## [1.1.3](https://github.com/receter/focus-log-extension/compare/focus-log-web-extension-v1.1.2...focus-log-web-extension-v1.1.3) (2024-10-17)
 
