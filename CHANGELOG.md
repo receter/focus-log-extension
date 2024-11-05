@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.5](https://github.com/receter/focus-log-extension/compare/focus-log-web-extension-v1.1.4...focus-log-web-extension-v1.1.5) (2024-11-05)
+
+
+### Bug Fixes
+
+* sync version in manifest with package.json when building ([2d895d1](https://github.com/receter/focus-log-extension/commit/2d895d10ee26f5a3e712235ab739e7fc5d219961))
+
 ## [1.1.4](https://github.com/receter/focus-log-extension/compare/focus-log-web-extension-v1.1.3...focus-log-web-extension-v1.1.4) (2024-10-17)
 
 
