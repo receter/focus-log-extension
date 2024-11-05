@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Focus Log",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A simple web extension that helps you keep track of what you did.",
   "options_ui": {
     "page": "options.html",

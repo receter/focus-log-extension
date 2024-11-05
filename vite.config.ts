@@ -1,10 +1,11 @@
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { updateGeneratedManifestVersion } from './plugins/updateGeneratedManifestVersion';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), updateGeneratedManifestVersion()],
   build: {
     rollupOptions: {
       input: {
