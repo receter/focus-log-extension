@@ -1,4 +1,11 @@
-> This is how I set up Vite to meet my requirements for building a Web Extension for Google Chrome, since other Browsers also support Web Extensions with Manifest v3 it should also apply to Firefox, Edge and Safari.
+# Focus Log
+
+A simple web extension that helps you keep track of what you did.
+
+Focus Log is a simple yet powerful extension designed to help you stay focused and keep track of your daily tasks. Easily set your current focus with just a click, and the extension's icon will change color, reminding you of your active focus at a glance. When you're ready, you can log your completed task and clear your focus with a single click. Originally built for internal use, we're excited to share it with everyone who wants a simple, no-frills way to track their work.
+
+[Chrome Web Store](https://chromewebstore.google.com/detail/focus-log/pgoamholhbaeiokhfcchhbaicndfpcjn)
+[Mozilla Firefox Addons](https://addons.mozilla.org/de/firefox/addon/focus-log/)
 
 ## Building
 
